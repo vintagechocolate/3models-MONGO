@@ -13,7 +13,6 @@ const fetchComment = async (req, res) => {
   // 1. Get id off the url
   // 2. Find the comment assoc. w/ ID
   // 3.Send response with that comment as the payload
-
   const commentId = req.params.id;
   // --------------------------------(1)
   const comment = await Comment.findById(commentId);
@@ -25,7 +24,7 @@ const fetchComment = async (req, res) => {
 const createComment = async (req, res) => {
   // 1. Get data from req.body
   // 2.Create comment
-  // 3. Respond with new copy of comment
+  // 3. Respond with new copy of a comment
   console.log(`BODY: ${req.body}`);
   const body = req.body.body;
   // --------------------------------(1)

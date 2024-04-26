@@ -13,7 +13,6 @@ const fetchNote = async (req, res) => {
   // 1. Get id off the url
   // 2. Find the note assoc. w/ ID
   // 3.Send response with that note as the payload
-
   const noteId = req.params.id;
   // --------------------------------(1)
   const note = await Note.findById(noteId);

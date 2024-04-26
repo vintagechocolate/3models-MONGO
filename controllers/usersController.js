@@ -13,7 +13,6 @@ const fetchUser = async (req, res) => {
   // 1. Get id off the url
   // 2. Find the user assoc. w/ ID
   // 3.Send response with that user as the payload
-
   const userId = req.params.id;
   // --------------------------------(1)
   const user = await User.findById(userId);

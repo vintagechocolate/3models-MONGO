@@ -5,7 +5,6 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const connectToDb = require("./config/connectToDb.js");
 // This pulls our Mongoose connection into application
-
 const Note = require("./models/note");
 const notesController = require("./controllers/notesController.js");
 const User = require("./models/user");
@@ -27,6 +26,7 @@ connectToDb();
 app.get("/", (req, res) => {
   res.send("This is a Landing Page");
 });
+
 
 // Obj: We want to establish CRUD routes for our Notes Model
 app.get("/notes", notesController.fetchAllNotes);
